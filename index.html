@@ -1,24 +1,283 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/assets/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
-    <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
- 
-      
-    </div>
+
+    <header class="header">
+      <div class="header__logo">
+        <img class="logo" src="./public/logo.svg" alt="Логотип">
+        <p class="logo-name">Логотип</p>
+      </div>
+      <button class="header__catalog">Каталог</button>
+        <input class="header__input" type="text" placeholder="Поиск по 100 000 запросов">
+        <nav class="header__nav">
+          <ul>
+            <li class="nav__item"><a href="#">Информация о компании</a></li>
+            <li class="nav__item"><a href="#">Контакты</a></li>
+            <li class="nav__item"><a href="#">Полезные ссылки</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="sidebar">
+
+        <div class="filter">
+          <h3>Название категории</h3>
+          <div class="category-item">
+              <span class="category-name">Название категории</span>
+              <span class="category-count">3</span>
+          </div>
+          <div class="category-item">
+              <span class="category-name">Название категории</span>
+              <span class="category-count">3</span>
+          </div>
+          <div class="category-item">
+              <span class="category-name">Название категории</span>
+              <span class="category-count">3</span>
+          </div>
+      </div>      
+        
+        <div class="filter__price">
+          <h3>Цена</h3>
+            <label>От: <input type="number" id="price-min" placeholder="0"></label>  
+            <label>До: <input type="number" id="price-max" placeholder="1000"></label> 
+        </div>
+  
+        <div class="filter">
+          <h3>Бренд</h3>
+          <input type="text" id="search" placeholder="Поиск">
+          <a href="#" id="clear">Очистить</a>
+            <label><input type="checkbox" class="brand">Атрибут</label>
+            <label><input type="checkbox" class="brand">Атрибут</label>
+            <label><input type="checkbox" class="brand">Атрибут</label>
+            <label><input type="checkbox" class="brand">Атрибут</label>
+            <label><input type="checkbox" class="brand">Атрибут</label>
+            <label><input type="checkbox" class="brand">Атрибут</label> 
+        </div>
+  
+        <div class="filter">
+          <h3>Размер</h3>
+            <label><input type="checkbox" class="size">Атрибут</label>
+            <label><input type="checkbox" class="size">Атрибут</label>
+            <label><input type="checkbox" class="size">Атрибут</label>
+            <label><input type="checkbox" class="size">Атрибут</label>
+            <label><input type="checkbox" class="size">Атрибут</label>
+            <label><input type="checkbox" class="size">Атрибут</label>
+        </div>
+      </div>
+  
+      <div class="container__cards">
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          </div>
+            <button class="out-of-stock" href="#">Сообщить о поступлении</button>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card__item">
+          <div class="card__picture">
+            <span class="badge">Хит продаж</span>
+            <img class="item__img" src="./public/product.png" alt="Фото продукта">
+            <span class="discount">25%</span>
+          </div>
+          <div class="brand__item">
+            <p class="brand">Бренд</p>
+            <p class="card__text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="price">
+              <span class="current-price">5 990</span>
+              <span class="old-price">7 990</span>
+            </div>
+              <button class="buy" href="#">Купить</button>
+          </div>
+        </div>
+
+        </div>
+      </main>
+    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

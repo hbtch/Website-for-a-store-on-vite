@@ -1,0 +1,217 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  max-width: 1920px;
+}
+
+.header {
+  max-width: 1720px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 12px 0px; /* Внутренние отступы для header */
+  background-color: #FFFFFF;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.header__logo .logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.header__logo .logo-name {
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+.header__catalog {
+  width: 104px;
+  height: 48px;
+  background-color: #FFFFFF;
+  margin-right: 20px;
+  padding: 8px 24px 8px 24px;
+  color: #000000;
+  border: 1px solid #73AFF4;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.header__catalog:hover {
+  background-color: #73AFF4;
+}
+.header__input {
+  width: 1015px;
+  color: #5A5A5A;
+  position: static;
+  padding: 16px 15px 16px 40px;
+  border: 1px solid #73AFF4;
+  border-radius: 10px;
+}
+.header__nav {
+  display: flex;
+}
+.header__nav ul {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 13px;
+  padding-left: 0;
+  margin: 0;
+}
+.header__nav ul .nav__item {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.header__nav ul .nav__item a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.sidebar {
+  width: 280px;
+  padding: 20px;
+  background-color: #fff;
+  border-right: 1px solid #eaeaea;
+}
+.sidebar .filter {
+  width: 280px;
+}
+.sidebar .filter h3 {
+  font-family: PT Sans;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sidebar .filter .category-item {
+  font-family: PT Sans;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.sidebar #clear {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Карточки товаров */
+.container__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+  background-color: #FFFFFF;
+}
+.container__cards .card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 20px;
+  background-color: #F8F8FA;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  position: relative;
+}
+.container__cards .card__item .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.container__cards .card__item__item__img {
+  width: 18px;
+  height: 18px;
+  align-self: center;
+}
+.container__cards .card__item .discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #73AFF4;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.container__cards .brand__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container__cards .brand__item .brand {
+  color: #AAAAAA;
+  margin-bottom: 10px;
+}
+.container__cards .brand__item .card__text {
+  color: #000000;
+}
+.container__cards .brand__item .price {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.container__cards .brand__item .current-prie {
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+}
+.container__cards .brand__item .old-price {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.container__cards .brand__item .buy {
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  color: #73AFF4;
+  border: 1px solid #73AFF4;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-top: auto;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.container__cards .brand__item .buy:hover {
+  background-color: #5A5A5A;
+}
+
+.out-of-stock {
+  width: 100%;
+  padding: 8px;
+  background-color: #FFFFFF;
+  color: #AAAAAA;
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.out-of-stock:hover {
+  background-color: #007bff;
+}
+
+/*# sourceMappingURL=style.css.map */

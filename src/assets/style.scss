@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    max-width: 1920px;
+}
+.header {
+    max-width: 1720px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap:nowrap;
+    padding: 12px 0px; /* Внутренние отступы для header */
+    background-color: #FFFFFF; 
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; // Отступ справа для группы логотипа
+    
+        .logo {
+          width: 24px; 
+          height: 24px; 
+          margin-right: 10px; // Отступ справа для логотипа
+        }
+    
+        .logo-name {
+          font-size: 1.2em; // Размер текста для логотипа
+          margin-right: 20px; // Отступ справа для текста логотипа
+        }
+      }
+    
+      &__catalog {
+        width: 104px;
+        height: 48px;
+        background-color: #FFFFFF;
+        margin-right: 20px; // Отступ справа для кнопки Каталог
+        padding: 8px 24px 8px 24px; // Внутренние отступы для кнопки Каталог
+        color: #000000; // Цвет текста для кнопки Каталог
+        border: 1px solid #73AFF4; // Без рамки
+        border-radius: 8px; // Скругление углов
+        cursor: pointer; // Курсор указателя при наведении
+        font-size: 14px;
+      }
+
+      &__catalog:hover {
+        background-color: #73AFF4;
+      }
+    
+      &__input {
+        width: 1015px;
+        color: #5A5A5A;
+        position: static;
+        padding: 16px 15px 16px 40px;
+        border: 1px solid #73AFF4;
+        border-radius: 10px;
+      }
+    
+      &__nav {
+        display: flex;
+    
+        ul {
+          width: 400px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          list-style: none; // Убираем маркеры списка
+          gap: 13px;
+          padding-left: 0;
+          margin: 0;
+    
+          .nav__item {
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 20px;
+    
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 14px;
+                line-height: 16px;
+            }
+          }
+        }
+      }
+  }
+  .main-container {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .sidebar {
+    width: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #eaeaea;
+    
+    .filter {
+      width: 280px;
+
+      h3 {
+        font-family: PT Sans;
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .category-item {
+        font-family: PT Sans;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        cursor: pointer;
+
+      }
+    }
+  
+    #clear {
+      display: block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  
+  /* Карточки товаров */
+  .container__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+    row-gap: 24px;
+    background-color: #FFFFFF;
+
+    .card__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 20px;
+    background-color: #F8F8FA;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    position: relative;
+  
+      .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #FFFFFF;
+        color: #000000; 
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+  
+      &__item__img {
+        width: 18px;
+        height: 18px;
+        align-self: center;
+      }
+  
+      .discount {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #73AFF4;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .brand__item{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+      .brand {
+        color: #AAAAAA;
+        margin-bottom: 10px;
+      }
+      
+
+      .card__text {
+        color: #000000;
+      }
+      .price {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+        .current-prie {
+          font-weight: 700;
+          font-style: normal;
+          color: #000;
+        }
+  
+        .old-price {
+          text-decoration: line-through;
+          color: #ccc;
+        }
+
+      .buy {
+        padding: 10px 20px;
+        background-color: #FFFFFF;
+        color: #73AFF4;
+        border: 1px solid #73AFF4;
+        border-radius: 4px;
+        align-self: flex-start;
+        margin-top:auto;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &:hover {
+          background-color:#5A5A5A;
+        }
+      }
+    }
+}
+.out-of-stock {
+  width: 100%;
+  padding: 8px;
+  background-color: #FFFFFF;
+  color: #AAAAAA;
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color:#007bff;
+}
+}
+      
