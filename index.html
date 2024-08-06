@@ -28,30 +28,38 @@
     <main class="main-container">
       <div class="sidebar">
 
-        <div class="filter">
-          <h3>Название категории</h3>
-          <div class="category-item">
-              <span class="category-name">Название категории</span>
+        <div class="filter__category">
+          <div class="category__title">Название категории</div>
+          <ul class="category__list">
+
+            <li class="category__item">
+              <span class="category__name">Название категории</span>
               <span class="category-count">3</span>
-          </div>
-          <div class="category-item">
-              <span class="category-name">Название категории</span>
+            </li>
+
+            <li class="category__item">
+              <span class="category__name">Название категории</span>
               <span class="category-count">3</span>
-          </div>
-          <div class="category-item">
-              <span class="category-name">Название категории</span>
+            </li>
+
+            <li class="category__item">
+              <span class="category__name">Название категории</span>
               <span class="category-count">3</span>
-          </div>
-      </div>      
+            </li>
+
+            </ul>
+        </div>      
         
         <div class="filter__price">
-          <h3>Цена</h3>
-            <label>От: <input type="number" id="price-min" placeholder="0"></label>  
-            <label>До: <input type="number" id="price-max" placeholder="1000"></label> 
+          <div class="price__title">Цена</div>
+          <div class="price__container">
+            <label class="custom-label-left"><input type="number" id="price-min" placeholder="0"></label>  
+            <label class="custom-label-right"><input type="number" id="price-max" placeholder="1000"></label> 
+          </div>
         </div>
   
-        <div class="filter">
-          <h3>Бренд</h3>
+        <div class="filter__brand">
+          <div class="brand__title">Бренд</div>
           <input type="text" id="search" placeholder="Поиск">
           <a href="#" id="clear">Очистить</a>
             <label><input type="checkbox" class="brand">Атрибут</label>
@@ -62,8 +70,8 @@
             <label><input type="checkbox" class="brand">Атрибут</label> 
         </div>
   
-        <div class="filter">
-          <h3>Размер</h3>
+        <div class="filter__size">
+          <div class="size__title">Размер</div>
             <label><input type="checkbox" class="size">Атрибут</label>
             <label><input type="checkbox" class="size">Атрибут</label>
             <label><input type="checkbox" class="size">Атрибут</label>
