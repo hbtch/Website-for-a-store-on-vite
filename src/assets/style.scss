@@ -6,31 +6,35 @@ body {
 }
 .header {
     max-width: 1720px;
+    height: 72px;
     display: flex;
+    justify-content:space-between;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap:nowrap;
     padding: 12px 0px; /* Внутренние отступы для header */
     background-color: #FFFFFF; 
-
-    &__logo {
+}
+    .header__logo {
+      width: 145px;
+      height: 48px;
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        margin-right: 20px; // Отступ справа для группы логотипа
-    
+        padding: 0px 24px 0px 24px;
+        margin: 0px 8px;
+
         .logo {
           width: 24px; 
           height: 24px; 
-          margin-right: 10px; // Отступ справа для логотипа
         }
     
         .logo-name {
-          font-size: 1.2em; // Размер текста для логотипа
-          margin-right: 20px; // Отступ справа для текста логотипа
+          font-size: 16px;
+          font-weight: 400;
         }
       }
     
-      &__catalog {
+      .header__catalog {
         width: 104px;
         height: 48px;
         background-color: #FFFFFF;
@@ -41,34 +45,41 @@ body {
         border-radius: 8px; // Скругление углов
         cursor: pointer; // Курсор указателя при наведении
         font-size: 14px;
-      }
 
       &__catalog:hover {
         background-color: #73AFF4;
       }
-    
-      &__input {
+      }
+
+      .header__search {
         width: 1015px;
+        height: 48px;
+      }
+
+      .header__input {
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
         color: #5A5A5A;
-        position: static;
-        padding: 16px 15px 16px 40px;
+        padding: 12px 16px 12px 40px;
         border: 1px solid #73AFF4;
         border-radius: 10px;
+        width: 1015px;
+        background: url("../../public/header-search.svg") no-repeat 10px 10px;
       }
-    
-      &__nav {
+
+      .header__nav ul {
         display: flex;
-    
-        ul {
-          width: 400px;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 400px;
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           list-style: none; // Убираем маркеры списка
-          gap: 13px;
-          padding-left: 0;
-          margin: 0;
-    
+          padding: 0;
+      } 
           .nav__item {
             font-size: 16px;
             font-weight: 400;
@@ -81,9 +92,7 @@ body {
                 line-height: 16px;
             }
           }
-        }
-      }
-  }
+
   .main-container {
     display: flex; 
     flex-direction: row;
@@ -94,8 +103,11 @@ body {
     width: 280px;
     padding: 20px;
     background-color: #fff;
+    margin-right: 36px;
   }
-
+  .sidebar > div {
+    margin-bottom: 28px;
+  }
   .filter__category {
       width: 280px;
       display: flex;
@@ -147,36 +159,89 @@ body {
       font-size: 16px;
       font-weight: 700;
       line-height: 20px;
+      margin-bottom: 16px;
     }
 
   .price__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    position: relative;
+    justify-content:space-between;
+    align-items: center;
+
   }
-    .custom-label {
+    .custom-label-left {
       width: 119px;
       height: 36px;
       box-sizing: border-box;
       border-radius: 4px;
       border: 1px solid #AAAAAA;
-      position: absolute;
+      align-items: center;
+      padding: 10px 8px 10px 8px;
+    }
+    .dash {
+      width: 10px;
+      color: #D5D5D5;
+    }
+    .custom-label-right {
+      width: 119px;
+      height: 36px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #AAAAAA;
+      align-items: center;
+    padding: 10px 8px 10px 8px;
     }
 
     .filter__brand {
       width: 280px;
       display: flex;
       flex-direction: column;
-      
-      .brand__title {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 20px;
-        padding: 0px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    }
+    .filter__brand > div {
+      margin-bottom: 16px;
+    }
+      .brand__header {
+        display: flex;
+        justify-content: space-between;
+
+        .brand__title {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 20px;
+          padding: 0px;
+          margin-top: 10px;
+          margin-bottom: 16px;
+        }
+        #clear {
+          background-color: transparent;
+          border: none;
+          color:#AAAAAA;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 12px;
+          cursor: pointer;
+        }
       }
+
+      .search__container {
+        width: 100%;
+      }
+
+      #search {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        border: 1px solid #D5D5D5;
+        color: #AAAAAA;
+        padding: 10px 12px 10px 32px;
+        margin: 0px 8px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        margin: 0px;
+        background: url("../../public/search-brand.svg") no-repeat 8px center;
+      }
+
       .brand {
         font-size: 14px;
         font-weight: 400;
@@ -191,12 +256,12 @@ body {
       label {
         margin-bottom: 10px; /* Отступ снизу для каждой метки */
       }
-    }
 
     .filter__size {
       width: 280px;
       display: flex;
       flex-direction: column;
+      
 
       .size__title {
         text-align: center;
@@ -204,8 +269,7 @@ body {
         font-weight: 700;
         line-height: 20px;
         color: #333333;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
       }
       .size {
         font-size: 14px;
@@ -216,62 +280,92 @@ body {
         margin-bottom: 12px;
       }
     }
+    *, *::before, *::after {
+      box-sizing: border-box;
+  }
+  
   /* Карточки товаров */
   .container__cards {
+    max-width: 100%;
+    background-color: #FFFFFF;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 24px;
     row-gap: 24px;
-    background-color: #FFFFFF;
-
+    column-gap: 24px;
+  }
     .card__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 340px;
-    box-sizing: border-box;
-    margin: 10px;
-    padding: 20px;
-    background-color: #F8F8FA;
-    border: 1px solid #eaeaea;
-    border-radius: 5px;
-    position: relative;
-  
+    width: 333px;
+    height: 356px;
+    padding: 0px;
+    }
+    .card__picture {
+      width: 333px;
+      height: 200px;
+      box-sizing: border-box;
+      background-color: #F8F8FA;
+      border: 1px solid #eaeaea;
+      border-radius: 5px;
+      position: relative;
+
       .badge {
         position: absolute;
-        top: 10px;
-        left: 10px;
+        width: 112px;
+        height: 32px;
+        top: 12px;
+        left: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         background-color: #FFFFFF;
         color: #000000; 
         padding: 5px 10px;
         border-radius: 5px;
+        font-size: 14px;
+        font-weight: 400;
       }
-  
-      &__item__img {
-        width: 18px;
-        height: 18px;
-        align-self: center;
+      .icon-bestseller {
+        width: 13px;
+        height: 15px;
+      }
+      .item__img {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
   
       .discount {
+        text-align: center;
+        width: 48px;
+        height: 26px;
         position: absolute;
-        top: 10px;
-        right: 10px;
-        background-color: #73AFF4;
+        left: 12px;
+        bottom: 12px;
+        background-color: #7397F5;
         color: #FFFFFF;
-        padding: 5px 10px;
+        margin: 0;
+        padding: 6px 10px;
         border-radius: 5px;
       }
     }
 
-    .brand__item{
+    .third-card .card__picture {
+      filter: saturate(0) brightness(1) contrast(0.7);
+  }
+    .brand__item {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 0;
+        margin-left: 0;
 
       .brand {
         color: #AAAAAA;
-        margin-bottom: 10px;
       }
       
 
@@ -310,7 +404,7 @@ body {
         }
       }
     }
-}
+
 .out-of-stock {
   width: 100%;
   padding: 8px;

@@ -15,7 +15,9 @@
         <p class="logo-name">Логотип</p>
       </div>
       <button class="header__catalog">Каталог</button>
-        <input class="header__input" type="text" placeholder="Поиск по 100 000 запросов">
+        <div class="header__search">
+          <input type="text" class="header__input" placeholder="Поиск по 100 000 запросов">
+        </div>
         <nav class="header__nav">
           <ul>
             <li class="nav__item"><a href="#">Информация о компании</a></li>
@@ -53,15 +55,20 @@
         <div class="filter__price">
           <div class="price__title">Цена</div>
           <div class="price__container">
-            <label class="custom-label-left"><input type="number" id="price-min" placeholder="0"></label>  
-            <label class="custom-label-right"><input type="number" id="price-max" placeholder="1000"></label> 
+            <input class="custom-label-left" type="number" id="price-min" placeholder="от 0 &#8381;">
+            <div class="dash">-</div>
+            <input class="custom-label-right" type="number" id="price-max" placeholder="до 5 500 &#8381;">
           </div>
         </div>
   
         <div class="filter__brand">
-          <div class="brand__title">Бренд</div>
-          <input type="text" id="search" placeholder="Поиск">
-          <a href="#" id="clear">Очистить</a>
+          <div class="brand__header">
+            <div class="brand__title">Бренд</div>
+            <button type="button" id="clear">Очистить</button>
+          </div>
+          <div class="search__container">
+            <input type="text" id="search" placeholder="Поиск">
+          </div>
             <label><input type="checkbox" class="brand">Атрибут</label>
             <label><input type="checkbox" class="brand">Атрибут</label>
             <label><input type="checkbox" class="brand">Атрибут</label>
@@ -82,10 +89,11 @@
       </div>
   
       <div class="container__cards">
-  
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -102,7 +110,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -117,9 +127,11 @@
           </div>
         </div>
 
-        <div class="card__item">
+        <div class="card__item third-card">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -132,7 +144,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -149,7 +163,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -166,7 +182,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -183,7 +201,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -200,7 +220,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -217,7 +239,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -234,7 +258,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -251,7 +277,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
@@ -268,7 +296,9 @@
   
         <div class="card__item">
           <div class="card__picture">
-            <span class="badge">Хит продаж</span>
+            <div class="badge">Хит продаж
+              <img class="icon-bestseller" src="./public/icon-bestseller.svg" alt="Хит продаж">
+            </div>
             <img class="item__img" src="./public/product.png" alt="Фото продукта">
             <span class="discount">25%</span>
           </div>
