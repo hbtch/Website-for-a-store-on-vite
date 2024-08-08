@@ -1,423 +1,440 @@
+$white: #FFFFFF;
+$black: #000000;
+$light-gray: #AAAAAA;
+$blue: #7397F5;
+$light-blue: #73AFF4;
+$pointer: pointer;
+
+@mixin font {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
+}
+@mixin fontS ($font-weight: 400) {
+  font-size: 16px;
+  font-weight: $font-weight;
+  font-family: "PT Sans", sans-serif;
+}
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF;
+    background-color: $white;
     max-width: 1920px;
 }
+
 .header {
     max-width: 1720px;
     height: 72px;
-    display: flex;
-    justify-content:space-between;
+    @include flex;
     align-items: center;
     padding: 12px 0px; /* Внутренние отступы для header */
-    background-color: #FFFFFF; 
+    background-color: $white; 
 }
-    .header__logo {
-      width: 145px;
-      height: 48px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px 24px 0px 24px;
-        margin: 0px 8px;
 
-        .logo {
-          width: 24px; 
-          height: 24px; 
-        }
+.header__logo {
+  width: 145px;
+  height: 48px;
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 24px 0px 24px;
+  margin: 0px 8px;
+
+  .logo {
+    width: 24px; 
+    height: 24px; 
+  }
     
-        .logo-name {
-          font-size: 16px;
-          font-weight: 400;
-        }
-      }
-    
-      .header__catalog {
-        width: 104px;
-        height: 48px;
-        background-color: #FFFFFF;
-        margin-right: 20px; // Отступ справа для кнопки Каталог
-        padding: 8px 24px 8px 24px; // Внутренние отступы для кнопки Каталог
-        color: #000000; // Цвет текста для кнопки Каталог
-        border: 1px solid #73AFF4; // Без рамки
-        border-radius: 8px; // Скругление углов
-        cursor: pointer; // Курсор указателя при наведении
-        font-size: 14px;
+  .logo-name {
+    @include fontS;
+    color: $black;
+  }
+}
 
-      &__catalog:hover {
-        background-color: #73AFF4;
-      }
-      }
+.header__catalog {
+  width: 104px;
+  height: 48px;
+  background-color: $white;
+  margin-right: 20px; 
+  padding: 8px 24px 8px 24px;  
+  border: 1px solid $light-blue; 
+  border-radius: 8px; 
+  cursor: $pointer; 
+  @include font;
+  color: $black;
 
-      .header__search {
-        width: 1015px;
-        height: 48px;
-      }
+  &__catalog:hover {
+    background-color: $light-blue;
+  }
+}
 
-      .header__input {
-        width: 100%;
-        border: none;
-        font-size: 16px;
-        font-weight: 400;
-        color: #5A5A5A;
-        padding: 12px 16px 12px 40px;
-        border: 1px solid #73AFF4;
-        border-radius: 10px;
-        width: 1015px;
-        background: url("../../public/header-search.svg") no-repeat 10px 10px;
-      }
+.header__search {
+  width: 1015px;
+  height: 48px;
+}
 
-      .header__nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 400px;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          list-style: none; // Убираем маркеры списка
-          padding: 0;
-      } 
-          .nav__item {
-            font-size: 16px;
-            font-weight: 400;
-            margin-left: 20px;
-    
-            a {
-                text-decoration: none;
-                color: #000000;
-                font-size: 14px;
-                line-height: 16px;
-            }
-          }
+.header__input {
+  width: 100%;
+  border: none;
+  @include fontS;
+  color: #5A5A5A;
+  padding: 12px 16px 12px 40px;
+  border: 1px solid $light-blue;
+  border-radius: 10px;
+  width: 1015px;
+  background: url("../../public/header-search.svg") no-repeat 10px 10px;
+}
 
-  .main-container {
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: nowrap;
+.header__nav ul {
+  @include flex;
+  flex-direction: row;
+  width: 400px;
+  list-style: none; // Убираем маркеры списка
+  padding: 0;
+} 
+
+.nav__item {
+  @include fontS;
+  color: $black;
+  margin-left: 20px;
+
+  a {
+    text-decoration: none;
+    @include font;
+    color: $black;
+  }
+}
+
+.main-container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: nowrap;
   }
 
-  .sidebar {
-    width: 280px;
-    padding: 20px;
-    background-color: #fff;
-    margin-right: 36px;
+.sidebar {
+  width: 280px;
+  padding: 20px;
+  background-color: $white;
+  margin-right: 36px;
+}
+
+.sidebar > div {
+  margin-bottom: 28px;
+}
+
+.filter__category {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px;
+
+  .category__title {
+    @include font;
+    color: #333333;
   }
-  .sidebar > div {
-    margin-bottom: 28px;
-  }
-  .filter__category {
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding: 0px;
+}
+.category__list {
+  list-style-type: none;
+}
+.category__item {
+  @include flex;
+  padding: 5px 10px;
+  cursor: $pointer;
 
-    .category__title {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16px;
-      color: #333333;
-    }
-  }
-
-    .category__list {
-      list-style-type: none;
-    }
-
-    .category__item {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 10px;
-      cursor: pointer;
-
-    .category__name {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16px;
-      color: #333333;
-    }
-
-    .category-count {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 14px;
-      color: #AAAAAA;
-    }
-  }
-    .category__item:hover {
-    background-color: #7397F5; /* Цвет фона при наведении */
+  .category__name {
+    @include font;
+    color: #333333;
   }
 
-  .filter__price {
-    width: 280px;
+  .category-count {
+    @include font;
+    color: #AAAAAA;
   }
-    .price__title {
-      text-align: center;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 20px;
-      margin-bottom: 16px;
-    }
+}
 
-  .price__container {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
+.category__item:hover {
+    background-color: $blue; /* Цвет фона при наведении */
+}
 
+.filter__price {
+  width: 280px;
+}
+
+.price__title {
+  text-align: center;
+  @include fontS(700);
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.price__container {
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.custom-label-left {
+  width: 119px;
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid $light-gray;
+  align-items: center;
+  padding: 10px 8px 10px 8px;
+  cursor: $pointer; 
+}
+
+.dash {
+  width: 10px;
+  color: #D5D5D5;
+}
+
+.custom-label-right {
+  width: 119px;
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid $light-gray;
+  align-items: center;
+  padding: 10px 8px 10px 8px;
+  cursor: $pointer; 
+}
+
+.filter__brand {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__brand > div {
+  margin-bottom: 16px;
+}
+
+.brand__header {
+  @include flex;
+
+  .brand__title {
+    @include fontS(700);
+    line-height: 20px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 16px;
   }
-    .custom-label-left {
-      width: 119px;
-      height: 36px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      border: 1px solid #AAAAAA;
-      align-items: center;
-      padding: 10px 8px 10px 8px;
-    }
-    .dash {
-      width: 10px;
-      color: #D5D5D5;
-    }
-    .custom-label-right {
-      width: 119px;
-      height: 36px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      border: 1px solid #AAAAAA;
-      align-items: center;
-    padding: 10px 8px 10px 8px;
-    }
 
-    .filter__brand {
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-    }
-    .filter__brand > div {
-      margin-bottom: 16px;
-    }
-      .brand__header {
-        display: flex;
-        justify-content: space-between;
-
-        .brand__title {
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 20px;
-          padding: 0px;
-          margin-top: 10px;
-          margin-bottom: 16px;
-        }
-        #clear {
-          background-color: transparent;
-          border: none;
-          color:#AAAAAA;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 12px;
-          cursor: pointer;
-        }
-      }
-
-      .search__container {
-        width: 100%;
-      }
-
-      #search {
-        width: 100%;
-        display: block;
-        box-sizing: border-box;
-        border: 1px solid #D5D5D5;
-        color: #AAAAAA;
-        padding: 10px 12px 10px 32px;
-        margin: 0px 8px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        margin: 0px;
-        background: url("../../public/search-brand.svg") no-repeat 8px center;
-      }
-
-      .brand {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 14px;
-        color: #333333;
-      }
-
-      input[type="text"] {
-        margin-bottom: 10px; /* Отступ снизу для поля поиска */
-      }
-    
-      label {
-        margin-bottom: 10px; /* Отступ снизу для каждой метки */
-      }
-
-    .filter__size {
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-      
-
-      .size__title {
-        text-align: center;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 20px;
-        color: #333333;
-        margin-bottom: 16px;
-      }
-      .size {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-      }
-      label {
-        margin-bottom: 12px;
-      }
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
+  #clear {
+    background-color: transparent;
+    border: none;
+    color: $light-gray;
+    @include font;
+    cursor: $pointer;
   }
+}
+.search__container {
+  width: 100%;
+}
+#search {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid #D5D5D5;
+  color: $light-gray;
+  padding: 10px 12px 10px 32px;
+  margin: 0px 8px;
+  @include font;
+  margin: 0px;
+  background: url("../../public/search-brand.svg") no-repeat 8px center;
+}
+.brand {
+  @include font;
+  color: #333333;
+}
+input[type="text"] {
+  margin-bottom: 10px; /* Отступ снизу для поля поиска */
+}
+label {
+  margin-bottom: 10px; 
+  cursor: $pointer; 
+}
+
+.filter__size {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  .size__title {
+    text-align: center;
+    @include fontS(700);
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 16px;
+  }
+
+  .size {
+    @include font;
+  }
+
+  label {
+    margin-bottom: 12px;
+    cursor: $pointer; 
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
   
   /* Карточки товаров */
-  .container__cards {
+.container__cards {
     max-width: 100%;
-    background-color: #FFFFFF;
+    background-color: $white;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 24px;
     column-gap: 24px;
-  }
-    .card__item {
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 333px;
+  height: 356px;
+  padding: 0px;
+}
+
+.card__picture {
+  width: 333px;
+  height: 200px;
+  box-sizing: border-box;
+  background-color: #F8F8FA;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  position: relative;
+
+  .badge {
+    position: absolute;
+    width: 112px;
+    height: 32px;
+    top: 12px;
+    left: 12px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 333px;
-    height: 356px;
-    padding: 0px;
-    }
-    .card__picture {
-      width: 333px;
-      height: 200px;
-      box-sizing: border-box;
-      background-color: #F8F8FA;
-      border: 1px solid #eaeaea;
-      border-radius: 5px;
-      position: relative;
-
-      .badge {
-        position: absolute;
-        width: 112px;
-        height: 32px;
-        top: 12px;
-        left: 12px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        background-color: #FFFFFF;
-        color: #000000; 
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: 400;
-      }
-      .icon-bestseller {
-        width: 13px;
-        height: 15px;
-      }
-      .item__img {
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-  
-      .discount {
-        text-align: center;
-        width: 48px;
-        height: 26px;
-        position: absolute;
-        left: 12px;
-        bottom: 12px;
-        background-color: #7397F5;
-        color: #FFFFFF;
-        margin: 0;
-        padding: 6px 10px;
-        border-radius: 5px;
-      }
-    }
-
-    .third-card .card__picture {
-      filter: saturate(0) brightness(1) contrast(0.7);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: $white;
+    color: $black; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    @include font;
   }
-    .brand__item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 0;
-        margin-left: 0;
 
-      .brand {
-        color: #AAAAAA;
-      }
-      
+  .icon-bestseller {
+    width: 13px;
+    height: 15px;
+  }
 
-      .card__text {
-        color: #000000;
-      }
-      .price {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
+  .item__img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     }
-        .current-prie {
-          font-weight: 700;
-          font-style: normal;
-          color: #000;
-        }
   
-        .old-price {
-          text-decoration: line-through;
-          color: #ccc;
-        }
+  .discount {
+    text-align: center;
+    width: 48px;
+    height: 26px;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background-color: $blue;
+    color: $white;
+    margin: 0;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+}
 
-      .buy {
-        padding: 10px 20px;
-        background-color: #FFFFFF;
-        color: #73AFF4;
-        border: 1px solid #73AFF4;
-        border-radius: 4px;
-        align-self: flex-start;
-        margin-top:auto;
-        cursor: pointer;
-        margin-top: 10px;
+.third-card .card__picture {
+    filter: saturate(0) brightness(1) contrast(0.7);
+}
 
-        &:hover {
-          background-color:#5A5A5A;
-        }
-      }
-    }
+.brand__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
+
+  .brand {
+    color: $light-gray;
+  }    
+
+  .card__text {
+    color: $black;
+  }
+
+  .price {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .current-prie {
+    @include fontS(700);
+    color: $black;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #ccc;
+  }
+
+  .buy {
+    padding: 10px 20px;
+    background-color: $white;
+    color: $light-blue;
+    border: 1px solid $light-blue;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-top:auto;
+    cursor: $pointer;
+    margin-top: 10px;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+  }
+}
 
 .out-of-stock {
   width: 100%;
   padding: 8px;
-  background-color: #FFFFFF;
-  color: #AAAAAA;
-  border: 1px solid #AAAAAA;
+  background-color: $white;
+  color: $light-gray;
+  border: 1px solid $light-gray;
   border-radius: 4px;
-  font-size: 14px;
+  @include font;
   margin-top: 30px;
-  cursor: pointer;
+  cursor: $pointer;
 
   &:hover {
     background-color:#007bff;
+  }
 }
+
+@media (max-width: 1441px) {
+  body {
+    max-width: 1440px;
+  }
+  .header {
+    max-width: 1440px;
+  }
 }
-      
