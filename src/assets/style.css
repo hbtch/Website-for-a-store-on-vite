@@ -1,48 +1,41 @@
 @charset "UTF-8";
 body {
-  margin: 0;
-  padding: 0;
   background-color: #FFFFFF;
-  max-width: 1920px;
+  max-width: 1720px;
 }
 
 .header {
   max-width: 1720px;
   height: 72px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 0px; /* Внутренние отступы для header */
+  justify-content: flex-start;
+  gap: 20px;
   background-color: #FFFFFF;
+  padding-left: 28px;
 }
-
 .header__logo {
   width: 145px;
   height: 48px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   align-items: center;
-  padding: 0px 24px 0px 24px;
-  margin: 0px 8px;
+  gap: 10px;
 }
-.header__logo .logo {
+.header__logo-img {
   width: 24px;
   height: 24px;
 }
-.header__logo .logo-name {
+.header__logo-name {
   font-size: 16px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #000000;
 }
-
 .header__catalog {
   width: 104px;
   height: 48px;
   background-color: #FFFFFF;
-  margin-right: 20px;
-  padding: 8px 24px 8px 24px;
+  padding: 8px 24px;
   border: 1px solid #73AFF4;
   border-radius: 8px;
   cursor: pointer;
@@ -50,18 +43,16 @@ body {
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #000000;
+  margin-left: 5px;
 }
-.header__catalog__catalog:hover {
+.header__catalog:hover {
   background-color: #73AFF4;
 }
-
 .header__search {
   width: 1015px;
   height: 48px;
 }
-
-.header__input {
-  width: 100%;
+.header__search-input {
   border: none;
   font-size: 16px;
   font-weight: 400;
@@ -73,24 +64,21 @@ body {
   width: 1015px;
   background: url("../../public/header-search.svg") no-repeat 10px 10px;
 }
-
 .header__nav ul {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
   width: 400px;
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
-
-.nav__item {
+.header__nav-item {
   font-size: 16px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #000000;
-  margin-left: 20px;
 }
-.nav__item a {
+.header__nav-item a {
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
@@ -99,6 +87,7 @@ body {
 }
 
 .main-container {
+  max-width: 1720px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -120,47 +109,43 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0px;
 }
-.filter__category .category__title {
+.filter__category-title {
   font-size: 14px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #333333;
 }
-
-.category__list {
+.filter__category-list {
   list-style-type: none;
+  padding-left: 32px;
 }
-
-.category__item {
+.filter__category-list .filter__category-item {
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
   cursor: pointer;
 }
-.category__item .category__name {
+.filter__category-list .filter__category-item:hover {
+  background-color: #7397F5; /* Цвет фона при наведении */
+}
+.filter__category-list .filter__category-item .filter__category-name {
   font-size: 14px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #333333;
 }
-.category__item .category-count {
+.filter__category-list .filter__category-item .filter__category-count {
   font-size: 14px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #AAAAAA;
 }
 
-.category__item:hover {
-  background-color: #7397F5; /* Цвет фона при наведении */
-}
-
 .filter__price {
   width: 280px;
 }
-
-.price__title {
+.filter__price-title {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
@@ -168,15 +153,13 @@ body {
   line-height: 20px;
   margin-bottom: 16px;
 }
-
-.price__container {
+.filter__price-container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
-
-.custom-label-left {
+.filter__price-container .filter__price-label-left {
   width: 119px;
   height: 36px;
   box-sizing: border-box;
@@ -186,13 +169,11 @@ body {
   padding: 10px 8px 10px 8px;
   cursor: pointer;
 }
-
-.dash {
+.filter__price-container .filter__price-dash {
   width: 10px;
   color: #D5D5D5;
 }
-
-.custom-label-right {
+.filter__price-container .filter__price-label-right {
   width: 119px;
   height: 36px;
   box-sizing: border-box;
@@ -207,17 +188,13 @@ body {
   width: 280px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
-
-.filter__brand > div {
-  margin-bottom: 16px;
-}
-
-.brand__header {
+.filter__brand-header {
   display: flex;
   justify-content: space-between;
 }
-.brand__header .brand__title {
+.filter__brand-header .filter__brand-title {
   font-size: 16px;
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
@@ -226,7 +203,7 @@ body {
   margin-top: 10px;
   margin-bottom: 16px;
 }
-.brand__header #clear {
+.filter__brand-header #clear {
   background-color: transparent;
   border: none;
   color: #AAAAAA;
@@ -235,40 +212,33 @@ body {
   font-family: "PT Sans", sans-serif;
   cursor: pointer;
 }
-
-.search__container {
+.filter__brand-search {
   width: 100%;
 }
-
-#search {
+.filter__brand-search #search {
   width: 100%;
   display: block;
   box-sizing: border-box;
   border: 1px solid #D5D5D5;
   color: #AAAAAA;
   padding: 10px 12px 10px 32px;
-  margin: 0px 8px;
   font-size: 14px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   margin: 0px;
   background: url("../../public/search-brand.svg") no-repeat 8px center;
 }
-
-.brand {
+.filter__brand-container {
+  display: flex;
+  flex-direction: column;
+}
+.filter__brand-container .filter__brand-label {
+  margin-bottom: 10px;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #333333;
-}
-
-input[type=text] {
-  margin-bottom: 10px; /* Отступ снизу для поля поиска */
-}
-
-label {
-  margin-bottom: 10px;
-  cursor: pointer;
 }
 
 .filter__size {
@@ -276,7 +246,7 @@ label {
   display: flex;
   flex-direction: column;
 }
-.filter__size .size__title {
+.filter__size-title {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
@@ -285,12 +255,10 @@ label {
   color: #333333;
   margin-bottom: 16px;
 }
-.filter__size .size {
+.filter__size-label {
   font-size: 14px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
-}
-.filter__size label {
   margin-bottom: 12px;
   cursor: pointer;
 }
@@ -300,7 +268,7 @@ label {
 }
 
 /* Карточки товаров */
-.container__cards {
+.container-cards {
   max-width: 100%;
   background-color: #FFFFFF;
   display: grid;
@@ -309,7 +277,7 @@ label {
   column-gap: 24px;
 }
 
-.card__item {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,7 +285,6 @@ label {
   height: 356px;
   padding: 0px;
 }
-
 .card__picture {
   width: 333px;
   height: 200px;
@@ -327,7 +294,7 @@ label {
   border-radius: 5px;
   position: relative;
 }
-.card__picture .badge {
+.card__badge {
   position: absolute;
   width: 112px;
   height: 32px;
@@ -336,6 +303,7 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
   background-color: #FFFFFF;
   color: #000000;
   padding: 5px 10px;
@@ -344,11 +312,11 @@ label {
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
 }
-.card__picture .icon-bestseller {
+.card__badge-icon {
   width: 13px;
   height: 15px;
 }
-.card__picture .item__img {
+.card__picture-item {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -356,7 +324,7 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.card__picture .discount {
+.card__discount {
   text-align: center;
   width: 48px;
   height: 26px;
@@ -369,40 +337,34 @@ label {
   padding: 6px 10px;
   border-radius: 5px;
 }
-
-.third-card .card__picture {
-  filter: saturate(0) brightness(1) contrast(0.7);
-}
-
-.brand__item {
+.card__brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 0;
-  margin-left: 0;
 }
-.brand__item .brand {
+.card__brand-name {
   color: #AAAAAA;
+  overflow: hidden;
 }
-.brand__item .card__text {
+.card__brand-text {
   color: #000000;
 }
-.brand__item .price {
+.card__price {
   display: inline-flex;
   align-items: center;
   gap: 10px;
 }
-.brand__item .current-prie {
+.card__price-current {
   font-size: 16px;
   font-weight: 700;
   font-family: "PT Sans", sans-serif;
   color: #000000;
 }
-.brand__item .old-price {
+.card__price-old {
   text-decoration: line-through;
   color: #ccc;
 }
-.brand__item .buy {
+.card__buy {
   padding: 10px 20px;
   background-color: #FFFFFF;
   color: #73AFF4;
@@ -413,7 +375,7 @@ label {
   cursor: pointer;
   margin-top: 10px;
 }
-.brand__item .buy:hover {
+.card__buy:hover {
   background-color: #AAAAAA;
 }
 
@@ -439,7 +401,47 @@ label {
     max-width: 1440px;
   }
   .header {
-    max-width: 1440px;
+    max-width: 1240px;
+    gap: 24px;
+  }
+  .header__logo {
+    padding: 0px 24px;
+  }
+  .header__logo-img {
+    width: 18px;
+    height: 18px;
+  }
+  .header__search {
+    width: 479px;
+  }
+  .header__search .header__search-input {
+    width: 479px;
+  }
+  .main-container {
+    max-width: 1240px;
+  }
+  .sidebar {
+    width: 280px;
+  }
+  .container-cards {
+    width: 924px;
+    margin: 0px 36px;
+  }
+  .card {
+    width: 213px;
+    height: 372px;
+  }
+  .card__picture {
+    width: 213px;
+    height: 200px;
+  }
+  .card__badge {
+    width: 112px;
+    height: 32px;
+    padding: 0px 8px 0px 8px;
+    border-radius: 4px;
+    margin: 4px 0px;
+    top: 10px;
   }
 }
 
