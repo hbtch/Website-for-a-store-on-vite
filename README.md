@@ -1,4 +1,4 @@
-# Посмотреть можно [здесь](https://hbtch.github.io/vite-project/)
+# You can view it [here](https://hbtch.github.io/vite-project/)
 
 #### Стек:
 HTML, SCSS, Vite
