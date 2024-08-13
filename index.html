@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/vite-project/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/vite-project/assets/index-D08cD_Dq.js"></script>
+    <link rel="stylesheet" crossorigin href="/vite-project/assets/index-CyrzS0Kh.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo-img" src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%2021C4.45%2021%203.979%2020.8043%203.587%2020.413C3.19567%2020.021%203%2019.55%203%2019V5C3%204.45%203.19567%203.979%203.587%203.587C3.979%203.19567%204.45%203%205%203H19C19.55%203%2020.021%203.19567%2020.413%203.587C20.8043%203.979%2021%204.45%2021%205V19C21%2019.55%2020.8043%2020.021%2020.413%2020.413C20.021%2020.8043%2019.55%2021%2019%2021H5ZM6%2017H18L14.25%2012L11.25%2016L9%2013L6%2017Z'%20fill='%2373AFF4'/%3e%3c/svg%3e" alt="Логотип">
+        <p class="header__logo-name">Логотип</p>
+      </div>
+      <button class="header__catalog">Каталог</button>
+        <div class="header__search">
+          <input type="text" class="header__search-input" placeholder="Поиск по 100 000 запросов">
+          <button class="header__search-find">Найти</button>
+        </div>
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="#">Информация о компании</a></li>
+            <li class="header__nav-item"><a href="#">Контакты</a></li>
+            <li class="header__nav-item"><a href="#">Полезные ссылки</a></li>
+          </ul>
+        </div>
+    </header>
+
+    <main class="main-container">
+      <div class="sidebar">
+
+        <div class="filter__category">
+          <div class="filter__category-title">Название категории</div>
+          <ul class="filter__category-list">
+            <li class="filter__category-item">
+              <span class="filter__category-name">Название категории</span>
+              <span class="filter__category-count">3</span>
+            </li>
+            <li class="filter__category-item">
+              <span class="filter__category-name">Название категории</span>
+              <span class="filter__category-count">3</span>
+            </li>
+            <li class="filter__category-item">
+              <span class="filter__category-name">Название категории</span>
+              <span class="filter__category-count">3</span>
+            </li>
+            </ul>
+        </div>      
+        
+        <div class="filter__price">
+          <div class="filter__price-title">Цена</div>
+          <div class="filter__price-container">
+            <input class="filter__price-label-left" type="number" id="price-min" placeholder="от 0 &#8381;">
+            <div class="filter__price-dash">-</div>
+            <input class="filter__price-label-right" type="number" id="price-max" placeholder="до 5 500 &#8381;">
+          </div>
+        </div>
+  
+        <div class="filter__brand">
+          <div class="filter__brand-header">
+            <div class="filter__brand-title">Бренд</div>
+            <button type="button" id="clear">Очистить</button>
+          </div>
+          <div class="filter__brand-search">
+            <input type="text" id="search" placeholder="Поиск">
+          </div>
+          <div class="filter__brand-container">
+            <label class="filter__brand-label"><input type="checkbox" class="filter__brand-checkbox">Атрибут</label>
+            <label class="filter__brand-label"><input type="checkbox" class="filter__brand-checkbox">Атрибут</label>
+            <label class="filter__brand-label"><input type="checkbox" class="filter__brand-checkbox">Атрибут</label>
+            <label class="filter__brand-label"><input type="checkbox" class="filter__brand-checkbox">Атрибут</label>
+            <label class="filter__brand-label"><input type="checkbox" class="filter__brand-checkbox">Атрибут</label>
+            <label class="filter__brand-label"><input type="checkbox" class="filter__brand-checkbox">Атрибут</label> 
+          </div>
+        </div>
+  
+        <div class="filter__size">
+          <div class="filter__size-title">Размер</div>
+            <label class="filter__size-label"><input type="checkbox" class="filter__size-checkbox">Атрибут</label>
+            <label class="filter__size-label"><input type="checkbox" class="filter__size-checkbox">Атрибут</label>
+            <label class="filter__size-label"><input type="checkbox" class="filter__size-checkbox">Атрибут</label>
+            <label class="filter__size-label"><input type="checkbox" class="filter__size-checkbox">Атрибут</label>
+            <label class="filter__size-label"><input type="checkbox" class="filter__size-checkbox">Атрибут</label>
+            <label class="filter__size-label"><input type="checkbox" class="filter__size-checkbox">Атрибут</label>
+        </div>
+      </div>
+  
+      <div class="container-cards">
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+
+        <div class="card third-card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+          </div>
+            <button class="out-of-stock" href="#">Сообщить о поступлении</button>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card__picture">
+            <div class="card__badge">Хит продаж
+              <img class="card__badge-icon" src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3.33337%2011.6667C3.33337%2010.2083%203.6806%208.90972%204.37504%207.77083C5.06949%206.63194%205.83337%205.67361%206.66671%204.89583C7.50004%204.11806%208.26393%203.52417%208.95837%203.11417L10%202.5V5.25C10%205.76389%2010.1737%206.17%2010.5209%206.46833C10.8681%206.76667%2011.257%206.91611%2011.6875%206.91667C11.9237%206.91667%2012.1495%206.86806%2012.365%206.77083C12.5806%206.67361%2012.7784%206.51389%2012.9584%206.29167L13.3334%205.83333C14.3334%206.41667%2015.1389%207.22555%2015.75%208.26C16.3612%209.29444%2016.6667%2010.43%2016.6667%2011.6667C16.6667%2012.8889%2016.3681%2014.0036%2015.7709%2015.0108C15.1737%2016.0181%2014.3889%2016.8128%2013.4167%2017.395C13.6528%2017.0617%2013.837%2016.6969%2013.9692%2016.3008C14.1014%2015.9047%2014.1673%2015.485%2014.1667%2015.0417C14.1667%2014.4861%2014.0625%2013.9617%2013.8542%2013.4683C13.6459%2012.975%2013.3473%2012.5342%2012.9584%2012.1458L10%209.25L7.06254%2012.1458C6.65976%2012.5486%206.35421%2012.9931%206.14587%2013.4792C5.93754%2013.9653%205.83337%2014.4861%205.83337%2015.0417C5.83337%2015.4861%205.89949%2015.9064%206.03171%2016.3025C6.16393%2016.6986%206.34782%2017.0631%206.58337%2017.3958C5.61115%2016.8125%204.82643%2016.0172%204.22921%2015.01C3.63199%2014.0028%203.33337%2012.8883%203.33337%2011.6667ZM10%2011.5833L11.7709%2013.3125C12.007%2013.5486%2012.1875%2013.8125%2012.3125%2014.1042C12.4375%2014.3958%2012.5%2014.7083%2012.5%2015.0417C12.5%2015.7222%2012.257%2016.3019%2011.7709%2016.7808C11.2848%2017.2597%2010.6945%2017.4994%2010%2017.5C9.3056%2017.5%208.71532%2017.2603%208.22921%2016.7808C7.7431%2016.3014%207.50004%2015.7217%207.50004%2015.0417C7.50004%2014.7222%207.56254%2014.4131%207.68754%2014.1142C7.81254%2013.8153%207.9931%2013.5481%208.22921%2013.3125L10%2011.5833Z'%20fill='%23FF8743'/%3e%3c/svg%3e" alt="Хит продаж">
+            </div>
+            <img class="card__picture-item" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABSCAYAAADHLIObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQZSURBVHgB7Z1NTttAFIDfsykFNs0R6AmATaWqi8IJgE0kxILcADgB9AQoJyAsKIIuCCeATZUl6QmaI2SH+xO/jk1M3DCJx+NnzwTmkxAoGP98/uJYJuMgWMrFt846hrhJQFsE2Eekrg9+s17/0AULQbCI6+v72sOvhwZ6QiDBunwq7BJSc+nNQnt7e60PlmCFyKS+AYYNJKyp/I2Q2fcA27ZUakykWn2qmK+0cpE69alistJKRPLWp0q1lZYqssz6VKmqUnaRZupTpbxK2UTaUJ8qZVRaSKTd9anCU6mWSFvri0rD0DsDCHt5d27RSpVF2lwfItxRSDeLbxdb6aouLjrL5MGx+PGz+FpWnqFGpZkiba8Pido7Ox/vsqYXUhvgw15ZlUpFzmJ9WURBAMGR/vZMrxTHF/YS6kuIggj+Bvsh0QHX9kyqNBZZfG+Vg7n6VMEuhnQY7Vw8v/q+iuTdgyXYVJ8qGMLGnAfeCYF5kvqW5vXqe/gdrMfzMXFBy4ejuWn5RxsHA/gSlaHzqpcFR30UQin1xTuWvObi/PxdEARb07Y9ehy/XnZI8pumOC4dy8rQPzcbW0kLj33RjoUBNt/4flt2upPa9r3x30lFiuf8e1FIDzLIU6nNx750fVk7dijz5/jjc7KJfd9XWmEhpCW+taZVauuxL6u+SYTCDdLg2ePypzY8CggBznbrsSxlnioN8ces15cm67AyUWSKXupFpwclYPrYN4k8O1ZF5GhizUqLrqQuZdUnXVYekSm0Kz29vq0t/Fk4ESvZgBKooj4ZuiJHMyh6LGV6OldZn3T5RUWm0Kq0yHmpqfpkcIoczbTkSk3XJ12nMkSmYKvUpvpklC1ytKAClZLn9W2qT0ZlIlOUdl5q9FKaAZGjhTOdl9pwYdqoyBS5KzVZnwxbRD6RVamt/xbxwDLii6QEp+dX4lRojPPLzrG4kHtr47s6rBM5qziRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTDiRTHjx2+kchYgcetF7EsFRiBDCQy++jUAIGwBk5Z1CbSYqMXK3W//UjUfHDgderg1vy3BASJu235bLFJOGS/83zDgyK7414rcVB8EWebQvvK+CI3O4tHS89nDCVvT1mivNM1h/Lmtmr7FSncH6mSITXnqlureKSFAWmeYlVap7q4hxtEQmzGqlReuTUUhkmlmolKs+GWwiE7gq9YlWnj0G+C6EfOOryqhPRmW3z9as9HFoHUIv71A53Zs06VL5jcTKPJZWVZ8Mox8xwHUsrbo+6TqABehUarI+GdZ9DEtWpTbUJ8MqkWmSSkV7KwhYI8IbW+qT8Q+4fUN/TcYB+QAAAABJRU5ErkJggg==" alt="Фото продукта">
+            <span class="card__discount">25%</span>
+          </div>
+          <div class="card__brand">
+            <p class="card__brand-name">Бренд</p>
+            <p class="card__brand-text">Полное название товара в несколько строк для вида с обрывом в конце...</p>
+            <div class="card__price">
+              <span class="card__price-current">5 990</span>
+              <span class="card__price-old">7 990</span>
+            </div>
+              <button class="card__buy" href="#">Купить</button>
+          </div>
+        </div>
+
+        </div>
+      </main>
+    
+  </body>
+</html>
+
