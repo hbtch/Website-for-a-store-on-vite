@@ -17,5 +17,6 @@
     "vite": "^5.3.4",
     "vite-plugin-inspect": "^0.8.5",
     "webpack": "^5.93.0"
-  }
+  },
+  "homepage": "https://hbtch.github.io/vite-project/"
 }
