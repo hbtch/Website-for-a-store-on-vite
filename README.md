@@ -1,4 +1,4 @@
-# You can view it [here](https://hbtch.github.io/vite-project/)
+# You can view it [here](https://hbtch.github.io/Website-for-a-store-on-vite/)
 
 #### Стек:
 HTML, SCSS, Vite
