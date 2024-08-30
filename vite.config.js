@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/vite-project/',  
+  base: '/Website-for-a-store-on-vite/',  
 });
